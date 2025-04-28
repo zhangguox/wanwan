@@ -1,0 +1,44 @@
+page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrollarea {
+    flex: 1;
+    overflow-y: hidden;
+}
+
+.item {
+    margin-top: 20rpx;
+    text-align: center;
+    display: inline-block !important;
+    width: 30%;
+}
+
+.eyyc {
+    width: 100%;
+    text-align: center;
+}
+
+.timu {
+    margin-top: 20px;
+    height: 40px;
+}
+
+.eyyc input {
+    width: 50px;
+    display: inline-block !important;
+    border: 1px solid gray;
+    position: relative !important;
+    top: 500px !important;
+}
+
+.loginBtn {
+    margin-top: 10px;
+    display: inline-block !important;
+    background-color: skyblue;
+    border-radius: 20px;
+    margin-left: 20px !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

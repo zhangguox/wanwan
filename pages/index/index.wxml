@@ -2,29 +2,17 @@
 <scroll-view class="scrollarea" scroll-y type="list">
     <view class="container">
         <view class="userinfo">
-            <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
+            <block>
                 <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
                     <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
                 </button>
-                <view class="nickname-wrapper">
-                    <text class="nickname-label">昵称</text>
-                    <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-                </view>
-                <view class="nickname-wrapper">
-                    <text class="nickname-label">密码</text>
-                    <input type="safe-password" class="nickname-input" placeholder="请输入密码" bind:change="onPasswordChange" />
-                </view>
                 <view>
-                    <button class="loginBtn" bindtap="onLogin">登录</button>
+                    <block wx:if="{{hasUserInfo}}">
+                        <button id="log" class="loginBtn" bindtap="onLogin">日志</button>
+                        <button id="fangcheng" class="loginBtn" bindtap="onLogin">方程</button>
+                        <button id="shuxue" class="loginBtn" bindtap="onLogin">加减算数</button>
+                    </block>
                 </view>
-            </block>
-            <block wx:elif="{{!hasUserInfo}}">
-                <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-                <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-            </block>
-            <block wx:else>
-                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
             </block>
         </view>
         <view class="usermotto">

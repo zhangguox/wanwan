@@ -1,24 +1,11 @@
 <!--shuxue.wxml-->
+<navigation-bar title="加减算数" back="{{true}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-    <!-- <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
-    <view class="log-item">{{index + 1}}. {{log.date}}</view>
-  </block> -->
     <view class="eyyc">
-        <view>一元二次方程组</view>
-        <text class="timu">
-            <input type="text" value="{{a}}" id="a" bindinput="inputValueChange" />X² + <input type="text" value="{{b}}" id="b" bindinput="inputValueChange" />X + <input type="text" value="{{c}}" id="c" bindinput="inputValueChange" /> = 0
-        </text>
-        <view>
-            <button size="mini" class="loginBtn" bindtap="onResult">答案</button>
-            {{result}}
-        </view>
-
         <text style="border-top: 1px solid gray; width: 90%;  padding-top: 10px; margin: 20px 0 0 20px;">
-            <!-- <span> -->
             <button size="mini" style="" class="loginBtn" bindtap="createItems">随机出题</button>
-                <button size="mini" style="" class="loginBtn" bindtap="showAnswerFn">显示答案</button>
-                <button size="mini" class="loginBtn" bindtap="saveToCanvas">生成图片</button>
-                <!-- </span> -->
+            <button size="mini" style="" class="loginBtn" bindtap="showAnswerFn">显示答案</button>
+            <button size="mini" class="loginBtn" bindtap="saveToCanvas">生成图片</button>
         </text>
         <snapshot id="targetDom">
             <view id="target" style="padding: 20px;">

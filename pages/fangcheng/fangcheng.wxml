@@ -1,0 +1,25 @@
+<!--fangcheng.wxml-->
+<navigation-bar title="方程" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+    <view class="eyyc">
+        <view>一元二次方程组</view>
+        <text class="timu">
+            <input type="text" value="{{a}}" id="a" bindinput="inputValueChange" />X² + <input type="text" value="{{b}}" id="b" bindinput="inputValueChange" />X + <input type="text" value="{{c}}" id="c" bindinput="inputValueChange" /> = 0
+        </text>
+        <text style="text-align: left; display: flex !important; align-items: center">
+            <button size="mini" class="loginBtn" bindtap="onResult">答案</button>{{result}}
+        </text>
+    </view>
+    <view class="eyyc">
+        <view>二元一次方程组</view>
+        <text class="timu">
+            <input value="{{x1}}" type="text" id="x1" bindinput="inputValueChange" />X + <input value="{{y1}}" type="text" id="y1" bindinput="inputValueChange" />Y = <input value="{{z1}}" type="text" id="z1" bindinput="inputValueChange" />
+        </text>
+        <text class="timu">
+            <input value="{{x2}}" type="text" id="x2" bindinput="inputValueChange" />X + <input value="{{y2}}" type="text" id="y2" bindinput="inputValueChange" />Y = <input value="{{z2}}" type="text" id="z2" bindinput="inputValueChange" />
+        </text>
+        <text style="text-align: left; display: flex !important; align-items: center">
+            <button size="mini" class="loginBtn" bindtap="onResult2">答案</button>{{result2}}
+        </text>
+    </view>
+</scroll-view>
